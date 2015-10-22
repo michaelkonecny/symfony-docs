@@ -372,7 +372,7 @@ To do this, add a ``termsAccepted`` field to your form, but set its
 
     // src/AppBundle/Form/UserType.php
     // ...
-    use Symfony\Component\Validator\Constraints\IsTrue;
+    use Symfony\Component\Validator\Constraints\True;
 
     class UserType extends AbstractType
     {
@@ -383,7 +383,7 @@ To do this, add a ``termsAccepted`` field to your form, but set its
                 // ...
                 ->add('termsAccepted', 'checkbox', array(
                     'mapped' => false,
-                    'constraints' => new IsTrue(),
+                    'constraints' => new True(),
                 ))
             );
         }
